@@ -1,0 +1,134 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Recursive Explorations
+subtitle: "My learnings in technology and science"
+logo: "/assets/images/logo.png"
+# Will only be visible to SEO
+description: >- # this means to ignore newlines until "baseurl:"
+  A messy corner of the internet where I write about everything I find on my 
+  recursive explorations into computation, machine learning and science.
+# name will be the default author name
+name: Swaroop Kumar ML
+email: swaroopkml96@gmail.com
+author:
+  name     : "Swaroop Kumar M.L."
+  avatar   : "/assets/images/avatar.jpg"
+  bio      : "Machine learning engineer and science enthusisast"
+  # location : "Mysore, India"
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/swaroopkml"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/swaroopkml96"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/swaroopkml/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:swaroopkml96@gmail.com"
+
+
+# Other site settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://swaroopk.in" # the base hostname & protocol for your site, e.g. http://example.com
+pagination: 5
+search: true
+timezone: Asia/Calcutta
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "recursiveexplorations"
+
+# Will appear when posts are shared in twitter
+twitter:
+  username: "swaroopkml"
+og_image: /assets/images/logo.png
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/swaroopkml"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/swaroopkml96"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/swaroopkml/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:swaroopkml96@gmail.com"
+
+# Not sure where these are used
+twitter_username: swaroopkml
+github_username:  swaroopkml96
+
+# Build settings
+# theme: minima
+theme: minimal-mistakes-jekyll
+# "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "contrast" 
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
+      read_time: true
+      comments: true
+      author_profile: true
+      share: true
+      related: true
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
